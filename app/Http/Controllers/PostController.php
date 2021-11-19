@@ -9,7 +9,7 @@ class PostController extends Controller
 {
     public function index(Post $post)
     {
-        return view('index')->with(['posts' => $post->getPaginate()]);
+        return view('posts/index')->with(['posts' => $post->getPaginateByLimit()]);
     }
     
     // カリキュラム08-3ブログ投稿詳細の表示
